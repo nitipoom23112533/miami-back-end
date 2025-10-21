@@ -1,0 +1,9 @@
+runtime: go122  # หรือ go121 ถ้าใช้ Go 1.21
+
+# instance_class: F1  # ใช้ F1 สำหรับ Free Tier
+# entrypoint: go run main.go  # คำสั่งเริ่มต้นรันแอป
+
+# automatic_scaling:
+#   target_cpu_utilization: 0.65
+#   min_instances: 1
+#   max_instances: 5

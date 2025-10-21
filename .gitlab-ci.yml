@@ -1,0 +1,11 @@
+image: google/cloud-sdk:alpine
+
+deploy-prod:
+  stage: deploy
+  script:
+    - gcloud auth activate-service-account --key-file="$GCP_SERVICE_ACCOUNT_KEY"
+    - gcloud config set project brs-miami-1
+    - gcloud --quiet app deploy app.yaml
+  environment: production
+  only:
+    - master
